@@ -14,13 +14,6 @@
   box-sizing: border-box;
 }
 
-body {
-  font-family: 'Segoe UI', sans-serif;
-  background-color: var(--gris);
-  color: var(--negro);
-  line-height: 1.6;
-}
-
 /* ===== NAVBAR ===== */
 .navbar {
   background-color: var(--azul);
@@ -358,4 +351,5 @@ footer {
   padding: 1rem;
   font-size: 0.9rem;
 }
+
 
