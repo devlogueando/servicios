@@ -226,7 +226,7 @@ body {
 
     .fondo-combinado {
     background: linear-gradient(rgba(201, 244, 211, 0.95), rgba(255,255,255,0.95)),
-                url('../assets/fondo-pagina.png') no-repeat center top;
+                url('fondo-pagina.png') no-repeat center top;
     background-size: cover;
     background-attachment: fixed;
     background-blend-mode: lighten;
@@ -264,4 +264,5 @@ footer {
   padding: 1rem;
   font-size: 0.9rem;
 }
+
 
