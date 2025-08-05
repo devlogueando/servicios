@@ -207,24 +207,20 @@
       --verde-lima: #7CF29F;
       --negro-intenso: #121212;
     }
-
-    .fondo-combinado {
-    background: linear-gradient(rgba(84, 184, 108, 0.95), rgba(255,255,255,0.95)),
-                url('fondo-pagina.png') no-repeat center top;
-    background-size: cover;
-    background-attachment: fixed;
-    background-blend-mode: lighten;
-    }
-
-    html, body {
-      height: 100%;
-      margin: 0;
-      font-family: 'JetBrains Mono', monospace;
-      background-color: var(--gris-neutro);
-      color: var(--negro-intenso);
-      display: flex;
-      flex-direction: column;
-    }
+body {
+    font-family: 'JetBrains Mono', monospace;
+    background-color: var(--gris-neutro);
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+.fondo-combinado {
+background: linear-gradient(rgba(84, 184, 108, 0.95), rgba(255,255,255,0.95)),
+            url('fondo-pagina.png') no-repeat center top;
+background-size: cover;
+background-attachment: fixed;
+background-blend-mode: lighten;
+}
 
     main {
       flex: 1;
@@ -351,5 +347,6 @@ footer {
   padding: 1rem;
   font-size: 0.9rem;
 }
+
 
 
