@@ -56,16 +56,33 @@
     .bg-negro     { background-color: var(--negro-intenso) !important; }
   </style>
 </head>
+  <script>
+  // Cierra el menú al hacer clic en un enlace (solo en móvil)
+  document.querySelectorAll('.navbar-collapse .nav-link').forEach(link => {
+    link.addEventListener('click', () => {
+      const navbarCollapse = document.querySelector('.navbar-collapse');
+      if (navbarCollapse.classList.contains('show')) {
+        new bootstrap.Collapse(navbarCollapse).toggle();
+      }
+    });
+  });
+</script>
+
 <body class="fondo-combinado">
-<header class="navbar navbar-expand-lg bg-azul text-white">
+<header class="navbar navbar-expand-lg navbar-dark bg-azul sticky-top">
   <div class="container-fluid px-4">
     <a class="navbar-brand d-flex align-items-center text-celeste" href="index.html">
       <img src="LOGO DEVLOGUEANDO.png" alt="Logo Devlogueando" width="32" height="32" class="me-2 rounded-circle">
       Devlogueando
     </a>
-    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+
+    <!-- Botón de hamburguesa -->
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+            aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
       <span class="navbar-toggler-icon"></span>
     </button>
+
+    <!-- Enlaces de navegación -->
     <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
       <ul class="navbar-nav ms-auto">
         <li class="nav-item"><a class="nav-link text-white" href="index.html">Inicio</a></li>
@@ -77,6 +94,7 @@
     </div>
   </div>
 </header>
+
 
 
 
@@ -153,6 +171,7 @@
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 </html>
+
 
 
 
