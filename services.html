@@ -109,6 +109,15 @@
       padding: 1rem 0;
       margin-top: auto;
     }
+    .card {
+      min-width: 250px; /* Evita tarjetas angostas */
+      flex: 1;
+    }
+
+    .row > div {
+      display: flex;
+    }
+
   </style>
 </head>
   <script>
@@ -152,8 +161,6 @@
   </div>
 </header>
 
-
-
   <!-- 📦 CATÁLOGO DE SERVICIOS -->
   <main class="container py-5">
     <h1 class="text-center mb-5" style="color: var(--azul-petroleo);">Catálogo de Servicios</h1>
@@ -161,7 +168,7 @@
     <div class="row g-4 justify-content-center">
 
       <!-- Servicio 1 -->
-      <div class="col-md-6 col-lg-4">
+      <div class="col-sm-6 col-md-4 col-lg-3 d-flex">
         <div class="card h-100">
           <img src="LOGO DEVLOGUEANDO.png" class="card-img-top" alt="Creación de sitios web">
           <div class="card-body">
@@ -173,7 +180,7 @@
       </div>
 
       <!-- Servicio 2 -->
-      <div class="col-md-6 col-lg-4">
+      <div class="col-sm-6 col-md-4 col-lg-3 d-flex">
         <div class="card h-100">
           <img src="LOGO DEVLOGUEANDO.png" class="card-img-top" alt="Diseño gráfico y branding">
           <div class="card-body">
@@ -185,7 +192,7 @@
       </div>
 
       <!-- Servicio 3 -->
-      <div class="col-md-6 col-lg-4">
+      <div class="col-sm-6 col-md-4 col-lg-3 d-flex">
         <div class="card h-100">
           <img src="LOGO DEVLOGUEANDO.png" class="card-img-top" alt="Tarjetas digitales">
           <div class="card-body">
@@ -197,7 +204,7 @@
       </div>
 
       <!-- Servicio 4 -->
-      <div class="col-md-6 col-lg-4">
+      <div class="col-sm-6 col-md-4 col-lg-3 d-flex">
         <div class="card h-100">
           <img src="LOGO DEVLOGUEANDO.png" class="card-img-top" alt="Marketing Digital">
           <div class="card-body">
@@ -209,7 +216,7 @@
       </div>
 
       <!-- Servicio 5 -->
-      <div class="col-md-6 col-lg-4">
+      <div class="col-sm-6 col-md-4 col-lg-3 d-flex">
         <div class="card h-100">
           <img src="LOGO DEVLOGUEANDO.png" class="card-img-top" alt="Marketing Digital">
           <div class="card-body">
@@ -221,7 +228,7 @@
       </div>
 
       <!-- Servicio 6 -->
-      <div class="col-md-6 col-lg-4">
+      <div class="col-sm-6 col-md-4 col-lg-3 d-flex">
         <div class="card h-100">
           <img src="LOGO DEVLOGUEANDO.png" class="card-img-top" alt="Marketing Digital">
           <div class="card-body">
@@ -244,6 +251,7 @@
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 </html>
+
 
 
 
