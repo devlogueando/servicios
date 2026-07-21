@@ -1,0 +1,309 @@
+/* =============================================
+   DEVLOGUEANDO - NOSOTROS (About) STYLES
+   ============================================= */
+
+/* ---- MISSION & VISION ---- */
+.mission-vision-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 2rem;
+    margin-bottom: 5rem;
+}
+
+.mv-card {
+    padding: 2.5rem;
+    border-radius: var(--radius-md);
+    background: var(--clr-surface);
+    border: 1px solid var(--clr-border);
+    position: relative;
+    overflow: hidden;
+}
+
+.mv-card::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 3px;
+}
+
+.mv-card.mission::before {
+    background: var(--grad-primary);
+}
+
+.mv-card.vision::before {
+    background: var(--grad-hot);
+}
+
+.mv-icon {
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+}
+
+.mv-card h3 {
+    font-size: 1.2rem;
+    margin-bottom: 0.8rem;
+}
+
+.mv-card.mission h3 {
+    background: var(--grad-primary);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+}
+
+.mv-card.vision h3 {
+    background: var(--grad-hot);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+}
+
+.mv-card p {
+    font-size: 0.95rem;
+    line-height: 1.8;
+    color: var(--clr-text-dim);
+}
+
+/* ---- COMPANY TIMELINE ---- */
+.timeline {
+    position: relative;
+    padding: 2rem 0;
+}
+
+.timeline::before {
+    content: '';
+    position: absolute;
+    left: 50%;
+    top: 0;
+    bottom: 0;
+    width: 2px;
+    background: linear-gradient(to bottom, var(--clr-cyan), var(--clr-purple), var(--clr-pink));
+    transform: translateX(-50%);
+}
+
+.timeline-item {
+    display: grid;
+    grid-template-columns: 1fr 56px 1fr;
+    gap: 2rem;
+    align-items: center;
+    margin-bottom: 3rem;
+}
+
+.timeline-item:nth-child(even) .timeline-content {
+    grid-column: 1;
+    text-align: right;
+}
+
+.timeline-item:nth-child(odd) .timeline-content {
+    grid-column: 3;
+}
+
+.timeline-item:nth-child(even) .timeline-spacer {
+    grid-column: 3;
+}
+
+.timeline-item:nth-child(odd) .timeline-spacer {
+    grid-column: 1;
+}
+
+.timeline-dot {
+    width: 56px;
+    height: 56px;
+    border-radius: 50%;
+    background: var(--clr-bg);
+    border: 2px solid var(--clr-cyan);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: var(--font-tech);
+    font-size: 0.75rem;
+    font-weight: 700;
+    color: var(--clr-cyan);
+    z-index: 1;
+    grid-column: 2;
+    box-shadow: var(--shadow-neon-cyan);
+}
+
+.timeline-content {
+    padding: 1.5rem;
+    background: var(--clr-surface);
+    border: 1px solid var(--clr-border);
+    border-radius: var(--radius-md);
+    transition: var(--transition);
+}
+
+.timeline-content:hover {
+    border-color: var(--clr-cyan);
+    box-shadow: 0 10px 30px rgba(0, 212, 255, 0.1);
+}
+
+.timeline-year {
+    font-family: var(--font-code);
+    font-size: 0.75rem;
+    color: var(--clr-cyan);
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    margin-bottom: 0.5rem;
+}
+
+.timeline-content h3 {
+    font-size: 1rem;
+    margin-bottom: 0.4rem;
+    color: var(--clr-text-bright);
+}
+
+.timeline-content p {
+    font-size: 0.85rem;
+    color: var(--clr-text-dim);
+    line-height: 1.6;
+}
+
+/* ---- TEAM GRID ---- */
+.team-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
+    gap: 1.5rem;
+}
+
+.team-card {
+    padding: 2rem 1.5rem;
+    text-align: center;
+    border-radius: var(--radius-md);
+    background: var(--clr-surface);
+    border: 1px solid var(--clr-border);
+    transition: var(--transition);
+    overflow: hidden;
+}
+
+.team-card:hover {
+    border-color: var(--clr-cyan);
+    transform: translateY(-6px);
+    box-shadow: 0 0 40px rgba(0, 212, 255, 0.1);
+}
+
+.team-avatar {
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    margin: 0 auto 1rem;
+    font-size: 2rem;
+    font-weight: 700;
+    font-family: var(--font-tech);
+    border: 2px solid var(--clr-border);
+    background: linear-gradient(135deg, rgba(0, 212, 255, 0.1), rgba(124, 58, 237, 0.1));
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: var(--transition);
+}
+
+.team-card:hover .team-avatar {
+    border-color: var(--clr-cyan);
+    box-shadow: var(--shadow-neon-cyan);
+}
+
+.team-name {
+    font-size: 1rem;
+    font-weight: 700;
+    color: var(--clr-text-bright);
+    margin-bottom: 0.3rem;
+}
+
+.team-role {
+    font-size: 0.8rem;
+    color: var(--clr-cyan);
+    font-family: var(--font-code);
+    margin-bottom: 0.8rem;
+}
+
+.team-desc {
+    font-size: 0.85rem;
+    line-height: 1.6;
+    color: var(--clr-text-dim);
+}
+
+/* ---- CORE VALUES ---- */
+.values-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 1.5rem;
+}
+
+.value-card {
+    padding: 2rem;
+    border-radius: var(--radius-md);
+    background: var(--clr-surface);
+    border: 1px solid var(--clr-border);
+    transition: var(--transition);
+}
+
+.value-card:hover {
+    border-color: var(--clr-purple);
+    transform: translateY(-4px);
+    box-shadow: 0 12px 40px rgba(124, 58, 237, 0.08);
+}
+
+.value-icon {
+    font-size: 2.2rem;
+    margin-bottom: 1rem;
+}
+
+.value-card h3 {
+    font-size: 1rem;
+    margin-bottom: 0.5rem;
+    color: var(--clr-text-bright);
+}
+
+.value-card p {
+    font-size: 0.88rem;
+    line-height: 1.7;
+    color: var(--clr-text-dim);
+}
+
+/* ---- NOSOTROS RESPONSIVE ---- */
+@media (max-width: 1024px) {
+    .timeline::before {
+        left: 24px;
+    }
+
+    .timeline-item {
+        grid-template-columns: 56px 1fr;
+        gap: 1rem;
+    }
+
+    .timeline-dot {
+        grid-column: 1;
+        grid-row: 1;
+    }
+
+    .timeline-item:nth-child(even) .timeline-content {
+        grid-column: 2;
+        text-align: left;
+    }
+
+    .timeline-item:nth-child(odd) .timeline-content {
+        grid-column: 2;
+    }
+
+    .timeline-spacer {
+        display: none !important;
+    }
+
+    .mission-vision-grid {
+        grid-template-columns: 1fr;
+    }
+}
+
+@media (max-width: 768px) {
+    .team-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 480px) {
+    .team-grid {
+        grid-template-columns: 1fr;
+    }
+}

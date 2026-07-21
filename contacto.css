@@ -1,0 +1,221 @@
+/* =============================================
+   DEVLOGUEANDO - CONTACTO STYLES
+   ============================================= */
+
+/* ---- LAYOUT ---- */
+.contact-grid {
+    display: grid;
+    grid-template-columns: 1fr 1.6fr;
+    gap: 3rem;
+    align-items: start;
+}
+
+/* ---- INFO CARDS ---- */
+.contact-info {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+}
+
+.contact-info-card {
+    display: flex;
+    gap: 1rem;
+    align-items: flex-start;
+    padding: 1.5rem;
+    background: var(--clr-surface);
+    border: 1px solid var(--clr-border);
+    border-radius: var(--radius-md);
+    transition: var(--transition);
+}
+
+.contact-info-card:hover {
+    border-color: var(--clr-cyan);
+    box-shadow: 0 10px 30px rgba(0, 212, 255, 0.08);
+}
+
+.contact-info-icon {
+    width: 44px;
+    height: 44px;
+    min-width: 44px;
+    border-radius: var(--radius-sm);
+    background: rgba(0, 212, 255, 0.1);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.2rem;
+    color: var(--clr-cyan);
+}
+
+.contact-info-label {
+    font-family: var(--font-code);
+    font-size: 0.75rem;
+    color: var(--clr-cyan);
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    margin-bottom: 4px;
+}
+
+.contact-info-value {
+    font-size: 0.95rem;
+    color: var(--clr-text);
+    line-height: 1.5;
+}
+
+/* ---- FORM WRAPPER ---- */
+.contact-form-wrapper {
+    background: var(--clr-surface);
+    border: 1px solid var(--clr-border);
+    border-radius: var(--radius-md);
+    padding: 2.5rem;
+    backdrop-filter: blur(20px);
+}
+
+.form-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1.2rem;
+}
+
+.form-group {
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+}
+
+.form-group.full {
+    grid-column: 1 / -1;
+}
+
+.form-label {
+    font-family: var(--font-code);
+    font-size: 0.78rem;
+    color: var(--clr-text-dim);
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+}
+
+/* Inputs */
+.form-input,
+.form-select,
+.form-textarea {
+    background: rgba(0, 0, 0, 0.3);
+    border: 1px solid var(--clr-border);
+    border-radius: var(--radius-sm);
+    padding: 12px 16px;
+    color: var(--clr-text);
+    font-family: var(--font-body);
+    font-size: 0.95rem;
+    outline: none;
+    transition: var(--transition);
+    width: 100%;
+}
+
+.form-input:focus,
+.form-select:focus,
+.form-textarea:focus {
+    border-color: var(--clr-cyan);
+    box-shadow: 0 0 0 3px rgba(0, 212, 255, 0.1);
+}
+
+.form-input::placeholder,
+.form-textarea::placeholder {
+    color: rgba(136, 136, 170, 0.5);
+}
+
+.form-select option {
+    background: var(--clr-bg2);
+}
+
+.form-textarea {
+    resize: vertical;
+    min-height: 130px;
+}
+
+/* Validation Errors */
+.form-error {
+    font-size: 0.78rem;
+    color: var(--clr-pink);
+    font-family: var(--font-code);
+    display: none;
+    margin-top: 4px;
+}
+
+.form-group.has-error .form-input,
+.form-group.has-error .form-select,
+.form-group.has-error .form-textarea {
+    border-color: var(--clr-pink);
+}
+
+.form-group.has-error .form-error {
+    display: block;
+}
+
+.form-submit {
+    margin-top: 0.5rem;
+    width: 100%;
+    justify-content: center;
+}
+
+/* ---- TOAST NOTIFICATION ---- */
+.toast {
+    position: fixed;
+    bottom: 2rem;
+    right: 2rem;
+    background: var(--clr-surface2);
+    border: 1px solid rgba(0, 255, 136, 0.4);
+    border-radius: var(--radius-md);
+    padding: 1rem 1.5rem;
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    z-index: 9999;
+    backdrop-filter: blur(20px);
+    transform: translateY(100px);
+    opacity: 0;
+    transition: all 0.4s cubic-bezier(0.34, 1.56, 0.64, 1);
+}
+
+.toast-error {
+    border-color: rgba(255, 0, 110, 0.4);
+}
+
+.toast.show {
+    transform: translateY(0);
+    opacity: 1;
+    box-shadow: 0 0 30px rgba(0, 255, 136, 0.15);
+}
+
+.toast-error.show {
+    box-shadow: 0 0 30px rgba(255, 0, 110, 0.15);
+}
+
+.toast-icon {
+    font-size: 1.4rem;
+}
+
+.toast-text {
+    font-size: 0.9rem;
+}
+
+.toast-text strong {
+    color: var(--clr-green);
+}
+
+.toast-error .toast-text strong {
+    color: var(--clr-pink);
+}
+
+/* ---- RESPONSIVE ---- */
+@media (max-width: 1024px) {
+    .contact-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .form-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .form-group.full {
+        grid-column: 1;
+    }
+}

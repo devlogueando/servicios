@@ -1,0 +1,133 @@
+/* =============================================
+   DEVLOGUEANDO - PORTAFOLIO STYLES
+   ============================================= */
+
+/* ---- FILTERS ---- */
+.portfolio-filters {
+    display: flex;
+    gap: 0.75rem;
+    flex-wrap: wrap;
+    margin-bottom: 2.5rem;
+    justify-content: center;
+}
+
+.filter-btn {
+    padding: 8px 20px;
+    border-radius: 100px;
+    font-family: var(--font-code);
+    font-size: 0.8rem;
+    font-weight: 600;
+    cursor: pointer;
+    border: 1px solid var(--clr-border);
+    background: var(--clr-surface);
+    color: var(--clr-text-dim);
+    transition: var(--transition);
+}
+
+.filter-btn:hover,
+.filter-btn.active {
+    border-color: var(--clr-cyan);
+    color: var(--clr-cyan);
+    background: rgba(0, 212, 255, 0.08);
+    box-shadow: 0 0 15px rgba(0, 212, 255, 0.2);
+}
+
+/* ---- GRID & CARDS ---- */
+.portfolio-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(340px, 1fr));
+    gap: 1.5rem;
+}
+
+.project-card {
+    border-radius: var(--radius-md);
+    overflow: hidden;
+    background: var(--clr-surface2);
+    border: 1px solid var(--clr-border);
+    transition: var(--transition);
+    position: relative;
+    display: flex;
+    flex-direction: column;
+}
+
+.project-card:hover {
+    border-color: var(--clr-purple);
+    transform: translateY(-8px);
+    box-shadow: 0 20px 60px rgba(124, 58, 237, 0.15);
+}
+
+.project-img-placeholder {
+    width: 100%;
+    height: 200px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 3.5rem;
+    background: linear-gradient(135deg, rgba(0, 212, 255, 0.07), rgba(124, 58, 237, 0.07));
+    position: relative;
+}
+
+.project-img-placeholder::after {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: repeating-linear-gradient(45deg, transparent, transparent 20px, rgba(0, 212, 255, 0.02) 20px, rgba(0, 212, 255, 0.02) 40px);
+}
+
+.project-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 200px;
+    background: rgba(5, 5, 16, 0.9);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 1rem;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+    backdrop-filter: blur(10px);
+}
+
+.project-card:hover .project-overlay {
+    opacity: 1;
+}
+
+.project-body {
+    padding: 1.5rem;
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+}
+
+.project-tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 6px;
+    margin-bottom: 0.8rem;
+}
+
+.project-body h3 {
+    font-size: 1rem;
+    margin-bottom: 0.4rem;
+    color: var(--clr-text-bright);
+}
+
+.project-body p {
+    font-size: 0.85rem;
+    line-height: 1.6;
+    color: var(--clr-text-dim);
+}
+
+/* Animation JS Filter */
+.project-card.hidden {
+    display: none;
+}
+
+/* ---- RESPONSIVE ---- */
+@media (max-width: 768px) {
+    .portfolio-grid {
+        grid-template-columns: 1fr;
+    }
+}

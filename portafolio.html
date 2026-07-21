@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portafolio | Devlogueando</title>
+
+    <link rel="stylesheet" href="CSS/style.css">
+    <link rel="stylesheet" href="CSS/portafolio.css">
+</head>
+
+<body>
+    <div class="scanlines"></div>
+
+    <!-- NAVBAR -->
+    <nav class="navbar">
+        <a href="index.html" class="nav-logo">
+            <img src="Media/logo.png" alt="Devlogueando Logo" class="nav-logo-img">
+            <div class="nav-logo-text">DEVLOGUEANDO</div>
+        </a>
+        <ul class="nav-links">
+            <li><a href="index.html">Inicio</a></li>
+            <li><a href="servicios.html">Servicios</a></li>
+            <li><a href="portafolio.html" class="active">Portafolio</a></li>
+            <li><a href="nosotros.html">Nosotros</a></li>
+        </ul>
+        <div class="nav-cta">
+            <a href="contacto.html" class="btn btn-secondary">Contactanos</a>
+        </div>
+        <button class="hamburger">
+            <span></span><span></span><span></span>
+        </button>
+    </nav>
+
+    <!-- MOBILE MENU -->
+    <div class="mobile-menu">
+        <a href="index.html">Inicio</a>
+        <a href="servicios.html">Servicios</a>
+        <a href="portafolio.html">Portafolio</a>
+        <a href="nosotros.html">Nosotros</a>
+        <a href="contacto.html" class="gradient-text">Contactanos</a>
+    </div>
+
+    <!-- PAGE HERO -->
+    <section class="page-hero">
+        <div class="container reveal">
+            <div class="section-tag">Últimos Proyectos</div>
+            <h1>Nuestro <span class="gradient-text">Universo</span></h1>
+            <p>Explora nuestras más recientes soluciones corporativas, integraciones robustas y plataformas
+                revolucionarias.</p>
+        </div>
+    </section>
+
+    <!-- PORTAFOLIO GRID -->
+    <section class="section pt-0">
+        <div class="container">
+
+            <!-- Filters -->
+            <div class="portfolio-filters reveal">
+                <button class="filter-btn active" data-filter="all">Todos</button>
+                <button class="filter-btn" data-filter="web">Plataformas Web</button>
+                <button class="filter-btn" data-filter="app">Apps Móviles</button>
+                <button class="filter-btn" data-filter="cloud">Cloud & API</button>
+            </div>
+
+            <div class="portfolio-grid">
+
+                <!-- Project 1 -->
+                <div class="project-card reveal delay-1" data-category="web">
+                    <div class="project-img-placeholder">Fin<span>Tech</span></div>
+                    <div class="project-overlay">
+                        <a href="#" class="btn btn-primary">Ver Caso</a>
+                    </div>
+                    <div class="project-body">
+                        <div class="project-tags">
+                            <span class="neon-badge cyan"><i class="ri-reactjs-fill"></i> React</span>
+                            <span class="neon-badge purple"><i class="ri-nodejs-fill"></i> Node</span>
+                        </div>
+                        <h3>Finova Dashboard B2B</h3>
+                        <p>Plataforma SaaS financiera con un tablero interactivo y gráficos en tiempo real manejando
+                            miles de transacciones por segundo.</p>
+                    </div>
+                </div>
+
+                <!-- Project 2 -->
+                <div class="project-card reveal delay-2" data-category="app">
+                    <div class="project-img-placeholder"
+                        style="background:linear-gradient(135deg, rgba(255,0,110,0.1), rgba(124,58,237,0.1));">
+                        Eco<span>App</span></div>
+                    <div class="project-overlay">
+                        <a href="#" class="btn btn-primary">Ver Caso</a>
+                    </div>
+                    <div class="project-body">
+                        <div class="project-tags">
+                            <span class="neon-badge pink"><i class="ri-code-s-slash-line"></i> Flutter</span>
+                            <span class="neon-badge cyan"><i class="ri-database-2-fill"></i> Firebase</span>
+                        </div>
+                        <h3>EcoTrack Mobile</h3>
+                        <p>App mobile iOS y Android para seguimiento de huella de carbono con integraciones
+                            geolocalizadas IoT y redes comunitarias.</p>
+                    </div>
+                </div>
+
+                <!-- Project 3 -->
+                <div class="project-card reveal delay-3" data-category="cloud">
+                    <div class="project-img-placeholder"
+                        style="background:linear-gradient(135deg, rgba(0,255,136,0.1), rgba(0,212,255,0.1));">
+                        AI<span>Core</span></div>
+                    <div class="project-overlay">
+                        <a href="#" class="btn btn-primary">Ver Caso</a>
+                    </div>
+                    <div class="project-body">
+                        <div class="project-tags">
+                            <span class="neon-badge green"><i class="ri-amazon-fill"></i> AWS</span>
+                            <span class="neon-badge purple"><i class="ri-terminal-box-fill"></i> Python</span>
+                        </div>
+                        <h3>Motor AI de Salud</h3>
+                        <p>Despliegue y optimización en AWS de un motor de reconocimiento de patrones de datos para
+                            aseguradoras usando machine learning.</p>
+                    </div>
+                </div>
+
+                <!-- Project 4 -->
+                <div class="project-card reveal delay-4" data-category="web">
+                    <div class="project-img-placeholder"
+                        style="background:linear-gradient(135deg, rgba(255,179,71,0.1), rgba(255,0,110,0.1));">
+                        E<span>Corp</span></div>
+                    <div class="project-overlay">
+                        <a href="#" class="btn btn-primary">Ver Caso</a>
+                    </div>
+                    <div class="project-body">
+                        <div class="project-tags">
+                            <span class="neon-badge orange"><i class="ri-global-fill"></i> Next.js</span>
+                            <span class="neon-badge cyan"><i class="ri-bank-card-fill"></i> Stripe</span>
+                        </div>
+                        <h3>Lumina E-Commerce</h3>
+                        <p>Migración de toda la infraestructura comercial a un e-commerce Ultra-rápido en Next.js,
+                            logrando bajar tiempos de respuesta en 60%.</p>
+                    </div>
+                </div>
+
+            </div>
+
+        </div>
+    </section>
+
+    <!-- CTA BANNER -->
+    <section class="section cta-banner reveal">
+        <div class="container">
+            <div class="cta-inner">
+                <h2>Únete a nuestra lista de <span class="gradient-text">casos de éxito</span></h2>
+                <p>Tu proyecto merece ser construido con los más altos estándares tecnológicos.</p>
+                <div class="cta-actions">
+                    <a href="contacto.html" class="btn btn-primary">Iniciar Proyecto</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-bottom" style="border:none; padding:0;">
+                <div class="footer-copy">© 2026 Devlogueando. Todos los derechos reservados.</div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="JS/main.js"></script>
+</body>
+
+</html>

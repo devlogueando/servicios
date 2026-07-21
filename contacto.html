@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contacto | Devlogueando</title>
+
+    <link rel="stylesheet" href="CSS/style.css">
+    <link rel="stylesheet" href="CSS/contacto.css">
+</head>
+
+<body>
+    <div class="scanlines"></div>
+
+    <!-- NAVBAR -->
+    <nav class="navbar">
+        <a href="index.html" class="nav-logo">
+            <img src="Media/logo.png" alt="Devlogueando Logo" class="nav-logo-img">
+            <div class="nav-logo-text">DEVLOGUEANDO</div>
+        </a>
+        <ul class="nav-links">
+            <li><a href="index.html">Inicio</a></li>
+            <li><a href="servicios.html">Servicios</a></li>
+            <li><a href="portafolio.html">Portafolio</a></li>
+            <li><a href="nosotros.html">Nosotros</a></li>
+        </ul>
+        <div class="nav-cta">
+            <a href="contacto.html" class="btn btn-primary" style="box-shadow:none;">Contactanos</a>
+        </div>
+        <button class="hamburger">
+            <span></span><span></span><span></span>
+        </button>
+    </nav>
+
+    <!-- MOBILE MENU -->
+    <div class="mobile-menu">
+        <a href="index.html">Inicio</a>
+        <a href="servicios.html">Servicios</a>
+        <a href="portafolio.html">Portafolio</a>
+        <a href="nosotros.html">Nosotros</a>
+        <a href="contacto.html" class="gradient-text">Contactanos</a>
+    </div>
+
+    <!-- PAGE HERO -->
+    <section class="page-hero">
+        <div class="container reveal">
+            <div class="section-tag">Formulario</div>
+            <h1>Hablemos de tu <span class="gradient-text">Futuro</span></h1>
+            <p>Estás a un formulario de distancia para llevar tu infraestructura tecnológica y plataforma digital a la
+                cima de su mercado.</p>
+        </div>
+    </section>
+
+    <!-- CONTACT GRID -->
+    <section class="section pt-0">
+        <div class="container contact-grid">
+
+            <!-- Contact Info Sidebar -->
+            <div class="contact-info reveal">
+
+                <div class="contact-info-card">
+                    <div class="contact-info-icon"><i class="ri-mail-send-line"></i></div>
+                    <div>
+                        <div class="contact-info-label">Escríbenos</div>
+                        <div class="contact-info-value">hola@devlogueando.com<br>proyectos@devlogueando.com</div>
+                    </div>
+                </div>
+
+                <div class="contact-info-card">
+                    <div class="contact-info-icon"><i class="ri-phone-line"></i></div>
+                    <div>
+                        <div class="contact-info-label">Llámanos</div>
+                        <div class="contact-info-value">+51 987 654 321<br>Atención: Lun-Vie 9am a 6pm</div>
+                    </div>
+                </div>
+
+                <div class="contact-info-card">
+                    <div class="contact-info-icon"><i class="ri-map-pin-line"></i></div>
+                    <div>
+                        <div class="contact-info-label">Nuevas Oficinas</div>
+                        <div class="contact-info-value">Centro de la Tecnología,<br>Lima, Perú. (Totalmente Remotos
+                            globalmente)</div>
+                    </div>
+                </div>
+
+            </div>
+
+            <!-- Contact Form Box -->
+            <div class="contact-form-wrapper reveal delay-1">
+                <form id="contactForm">
+                    <div class="form-grid">
+
+                        <div class="form-group">
+                            <label class="form-label" for="name">Nombre Completo</label>
+                            <input type="text" id="name" class="form-input" placeholder="Ej. Ana Pérez">
+                            <span class="form-error">Ingresa tu nombre.</span>
+                        </div>
+
+                        <div class="form-group">
+                            <label class="form-label" for="email">Correo Corporativo</label>
+                            <input type="email" id="email" class="form-input" placeholder="ana@tuempresa.com">
+                            <span class="form-error">Correo electrónico inválido.</span>
+                        </div>
+
+                        <div class="form-group full">
+                            <label class="form-label" for="service">Servicio de Interés</label>
+                            <select id="service" class="form-select">
+                                <option value="web">Desarrollo Web / SaaS</option>
+                                <option value="mobile">Desarrollo App Móvil</option>
+                                <option value="api">Integración de APIs y Sistemas</option>
+                                <option value="cloud">Infraestructura AWS & Cloud</option>
+                                <option value="other">Otro asunto / Consulta General</option>
+                            </select>
+                        </div>
+
+                        <div class="form-group full">
+                            <label class="form-label" for="message">Mensaje sobre el Proyecto</label>
+                            <textarea id="message" class="form-textarea"
+                                placeholder="Cuéntanos acerca del reto tecnológico que quieres resolver y metas del producto..."></textarea>
+                            <span class="form-error">El mensaje no puede estar vacío.</span>
+                        </div>
+
+                        <div class="form-group full">
+                            <button type="submit" class="btn btn-primary form-submit">Enviar Solicitud <i
+                                    class="ri-send-plane-line" style="margin-left:8px;"></i></button>
+                        </div>
+
+                    </div>
+                </form>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- TOAST ALERTS -->
+    <div id="contactToast" class="toast">
+        <div class="toast-icon"><i class="ri-checkbox-circle-fill text-green"></i></div>
+        <div class="toast-text"></div>
+    </div>
+
+    <!-- FOOTER -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-bottom" style="border:none; padding:0;">
+                <div class="footer-copy">© 2026 Devlogueando. Todos los derechos reservados.</div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="JS/main.js"></script>
+    <script src="JS/contact.js"></script>
+</body>
+
+</html>
